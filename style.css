@@ -1,0 +1,75 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+.back {
+  width: 100%;
+  height: 100%;
+}
+nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(77, 153, 167);
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url("https://i.pinimg.com/236x/71/b3/e4/71b3e4159892bb319292ab3b76900930.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+  border: 1px solid red;
+}
+.left a {
+  margin-right: 50px;
+  color: white;
+  text-decoration: none;
+}
+.left svg {
+  color: white;
+  display: none;
+}
+/* .OnClick {
+  position: absolute;
+  left: 0px;
+  animation: slid 2s cubic-bezier(0.19, 1, 0.22, 1) both;
+} */
+@keyframes slid {
+  to {
+    left: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  .left svg {
+    display: inline;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .right {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    width: 300px;
+    height: 300px;
+    left: -300px;
+    top: 50px;
+    background-color: rgb(77, 153, 167);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+  }
+}
